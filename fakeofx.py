@@ -40,7 +40,7 @@ def generate_amt(base_amt):
 
 # How long should this statement be?
 
-days = 90
+days = float(os.getenv("days", 90))
 end_date = date.today()
 
 # How much spending should the statement represent?
