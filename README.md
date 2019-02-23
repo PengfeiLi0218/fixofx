@@ -90,13 +90,26 @@ format.
 ## fakeofx.py ##
 
 The `fakeofx.py` script generates real-ish-seeming OFX for testing and demo
-purposes. You can generate a few fake OFX files using the script, and upload
-them to Wesabe to try it out or demonstrate it without showing your real
-account data to anyone.
+purposes. You can generate a few fake OFX files using the script, and <strike>
+upload them to Wesabe</strike> view them using 
+[gnucash](https://www.gnucash.org) to view the transactions in a gui.
 
 The script uses some real demographic data to make the fake transactions it
 lists look real, but otherwise it isn't at all sophisticated. It will randomly
 choose to generate a checking or credit card statement and has no options.
+
+To genetate an ofx file:
+
+    ./fakeofx.py > out.ofx
+
+By default 90 days of transactions are generated from today(), going back 90
+days. 
+
+To generate two years/730 days of transactions:
+
+    export days = 730
+    ./fakeofx.py > out.ofx
+    
 
 ## Contributing ##
 
